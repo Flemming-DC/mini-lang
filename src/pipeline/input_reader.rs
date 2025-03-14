@@ -23,7 +23,7 @@ pub fn read_cmd_line() -> Result<Config, InputError> {
 
     let min_arg_count = 1;
     if prog_and_args.len() < 1 + min_arg_count {
-        return input_error!("Expected at lest {min_arg_count} argument received {}. arguments", prog_and_args.len() - 1);
+        return input_error!("Expected at lest {min_arg_count} argument. Received {} arguments", prog_and_args.len() - 1);
     }
     let project_folder = prog_and_args[1].clone();
     if &project_folder == "--test_compiler" || &project_folder == "--run" { return input_error!(
