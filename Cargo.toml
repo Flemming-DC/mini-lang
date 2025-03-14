@@ -1,0 +1,10 @@
+[package]
+name = "mini-lang"
+version = "0.1.0"
+edition = "2021"
+
+[profile.dev]
+opt-level = 0  # Completely disables optimizations
+
+[dependencies]
+indexmap = "2.2"

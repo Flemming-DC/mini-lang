@@ -1,0 +1,79 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "run mini-lang",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=mini-lang",
+                    "--package=mini-lang",
+                    // "--release",
+                ],
+                "filter": {
+                    "name": "mini-lang",
+                    "kind": "bin",
+                }
+            },
+            "args": ["C:/Mine/Rust/mini-lang/demo-project", "--run"],
+            // "args": ["C:/Mine/Rust/mini-lang/empty-project", "--run"],
+            "cwd": "${workspaceFolder}",
+            "env": {"RUST_BACKTRACE": "1"}
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "test mini-lang",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=mini-lang",
+                    "--package=mini-lang",
+                ],
+                "filter": {
+                    "name": "mini-lang",
+                    "kind": "bin",
+                }
+            },
+            "args": ["C:/Mine/Rust/mini-lang/demo-project", "--test_compiler"],
+            "cwd": "${workspaceFolder}",
+            "env": {"RUST_BACKTRACE": "1"}
+        },
+        // {
+        //     "type": "lldb",
+        //     "request": "launch",
+        //     "name": "test mini-lang",
+        //     "cargo": {
+        //         "args": [
+        //             "test",
+        //             "--no-run",
+        //             "--bin=mini-lang",
+        //             "--package=mini-lang"
+        //         ],
+        //         "filter": {
+        //             "name": "mini-lang",
+        //             "kind": "bin"
+        //         }
+        //     },
+        //     "args": [],
+        //     "cwd": "${workspaceFolder}"
+        // },
+        // {
+        //     "name": "Debug rust app",
+        //     "type": "cppvsdbg", // "cppvsdbg", cppdbg
+        //     "request": "launch",
+        //     "program": "${workspaceRoot}/target/debug/mini-lang.exe",
+        //     "args": [], //"release"],
+        //     "cwd": "${workspaceFolder}",
+        //     "console": "integratedTerminal",
+        //     "preLaunchTask": "rust: cargo build",
+        //     // "preLaunchTask": "rust: cargo test",
+        //     // "env": {"RUST_BACKTRACE": "1"},
+        // },
+    ]
+}
