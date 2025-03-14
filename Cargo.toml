@@ -2,6 +2,7 @@
 name = "mini-lang"
 version = "0.1.0"
 edition = "2021"
+# rustc version 1.83.0
 
 [profile.dev]
 opt-level = 0  # Completely disables optimizations
