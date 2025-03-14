@@ -1,0 +1,8 @@
+
+
+struct Vector2_2 {x: float, y: float}
+
+fn add_2(v: Vector2_2, u: Vector2_2) Vector2_2 {
+    return Vector2_2 {x: v.x + u.x, y: v.y + u.y}
+}
+

@@ -20,8 +20,8 @@
                     "kind": "bin",
                 }
             },
-            "args": ["C:/Mine/Rust/mini-lang/demo-project", "--run"],
-            // "args": ["C:/Mine/Rust/mini-lang/empty-project", "--run"],
+            "args": ["C:/Mine/Rust/mini-lang/diverse/demo-project", "--run"],
+            // "args": ["C:/Mine/Rust/mini-lang/diverse/empty-project", "--run"],
             "cwd": "${workspaceFolder}",
             "env": {"RUST_BACKTRACE": "1"}
         },
@@ -40,7 +40,7 @@
                     "kind": "bin",
                 }
             },
-            "args": ["C:/Mine/Rust/mini-lang/demo-project", "--test_compiler"],
+            "args": ["C:/Mine/Rust/mini-lang/diverse/demo-project", "--test_compiler"],
             "cwd": "${workspaceFolder}",
             "env": {"RUST_BACKTRACE": "1"}
         },

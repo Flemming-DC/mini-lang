@@ -1,0 +1,20 @@
+
+struct LinkList_2 {next: >>LinkList_2, data: float}
+
+
+fn foo_2() {
+   ll0: LinkList_2 := LinkList_2 {next: as(>>LinkList_2) nil, data: 0.0}
+   ll1: LinkList_2 := LinkList_2 {next: >>ll0, data: 1.0}
+   ll2: LinkList_2 := LinkList_2 {next: >>ll1, data: 2.0}
+   
+   ll: LinkList_2 := ll2
+   
+   while ll.next != as(>>LinkList_2) nil do {
+       # P ll; # cannot print two variables with the same AST
+       ll = ll.next>>;
+   };
+
+}
+
+
+

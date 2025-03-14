@@ -1,0 +1,28 @@
+import "libmylib.a"
+import "libmylib_again.a"
+
+extern fn mylib_return_3() int
+extern fn mylib_again_return_5() int
+
+struct LinkList {next: >>LinkList, data: float}
+
+main 
+fn foo() {
+    P mylib_return_3();
+    P mylib_again_return_5();
+
+    ll0: LinkList := LinkList {next: as(>>LinkList) nil, data: 0.0}
+    ll1: LinkList := LinkList {next: >>ll0, data: 1.0}
+    ll2: LinkList := LinkList {next: >>ll1, data: 2.0}
+    
+    ll: LinkList := ll2
+    
+    while ll.next != as(>>LinkList) nil do {
+        P ll;
+        ll = ll.next>>;
+    };
+
+}
+
+
+
